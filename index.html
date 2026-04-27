@@ -3,19 +3,317 @@
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
- 
+<title>AfriTalent — Accueil</title>  
 <link 
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
 rel="stylesheet"> 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
+<!-- Barre de navigation commune a toutes les pages  -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+<div class="container"> 
+    <img src="images/logoAfriTalent.png" alt="logo-AfriTalent" width="100px"> 
 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<script src="js/main.js"></script>
+<a class="navbar-brand" href="index.html">AfriTalent</a> 
+
+     <button class="navbar-toggler" type="button" 
+     data-bs-toggle="collapse" 
+     data-bs-target="#navMenu" 
+     aria-controls="navMenu" 
+     aria-expanded="false" 
+     aria-label="Toggle navigation"> 
+<span class="navbar-toggler-icon">
+</span> 
+
+</button> 
+  <div class="collapse navbar-collapse" id="navMenu"> 
+  <ul class="navbar-nav ms-auto"> 
+<li class="nav-item">
+    <a class="nav-link active" href="index.html">Accueil</a>
+</li> 
+<li class="nav-item">
+    <a class="nav-link" href="freelances.html">Freelances</a>
+</li> 
+<li class="nav-item">
+    <a class="nav-link" href="tarifs.html">Tarifs</a>
+</li> 
+<li class="nav-item">
+   <a class="nav-link" href="about.html">A propos</a></li> 
+<li class="nav-item">
+   <a class="nav-link" href="contact.html">Contact</a>
+  </li> 
+   </ul>
+   <button class="btn btn-primary ms-3"> Rejoindre AfriTalent
+</button> 
+   </div> 
+   </div> 
+   </nav> 
+</header>
+
+   <!-- section hero page index  -->
+<main>
+<section class="Hero">
+<div class="hero-container">
+<div id="texte">
+   <h1>Trouvez le talent africain qu'il vous faut</h1>
+   <h2>Talents freelances africains : expertise, agilité locale, résultats concrets</h2>
+</div>
+<div class="btn">
+<a href="freelances.html" class="btn btn-primary">Je suis freelance</a> 
+<a href="freelances.html" class="btn btn-primary">Je cherche freelance</a> 
+</div>
+<div id="stats">
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <h2>+2 500</h2>
+            <p>Freelances</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>+800</h2>
+            <p>Entreprises</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>+12 000</h2>
+            <p>Missions réalisées</p>
+        </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- section comment ca marche -->
+ <section class="comment-ca-marche">
+
+    <div class="section-header">
+        <!-- <p class="subtitle">Comment ça marche</p> -->
+        <h2>Trouvez les meilleurs talents en quelques étapes</h2>
+    </div>
+
+    <div class="bento-grid">
+
+        <article class="card card-large">
+            <span class="step-number">01</span>
+            <div class="icon">🔍</div>
+            <h3>Publiez votre besoin</h3>
+            <p>
+                Décrivez votre projet, vos objectifs et les compétences recherchées.
+                Recevez rapidement des candidatures qualifiées.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="step-number">02</span>
+            <div class="icon">👨‍💻</div>
+            <h3>Choisissez un freelance</h3>
+            <p>
+                Comparez profils, expériences et avis pour sélectionner
+                le talent adapté à votre mission.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="step-number">03</span>
+            <div class="icon">🚀</div>
+            <h3>Lancez la mission</h3>
+            <p>
+                Démarrez la collaboration en toute simplicité
+                avec un suivi clair des étapes.
+            </p>
+        </article>
+
+        <article class="card card-wide">
+            <span class="step-number">04</span>
+            <div class="icon">✅</div>
+            <h3>Recevez vos résultats</h3>
+            <p>
+                Validez le travail livré, échangez avec le freelance
+                et développez votre activité plus vite.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+<!-- section categories de service -->
+ <section class="services-categories">
+
+    <div class="section-header">
+        <!-- <p class="subtitle">Catégories de services</p> -->
+        <h2>Trouvez le talent idéal selon votre besoin</h2>
+    </div>
+
+    <div class="categories-grid">
+
+        <article class="category-card">
+            <div class="icon">💻</div>
+            <h3>Développement Web</h3>
+            <p>+1 250 freelances disponibles</p>
+        </article>
+
+        <article class="category-card">
+            <div class="icon">🎨</div>
+            <h3>Design UI/UX</h3>
+            <p>+860 freelances disponibles</p>
+        </article>
+
+        <article class="category-card">
+            <div class="icon">📈</div>
+            <h3>Marketing Digital</h3>
+            <p>+940 freelances disponibles</p>
+        </article>
+
+        <article class="category-card">
+            <div class="icon">🤖</div>
+            <h3>Data & IA</h3>
+            <p>+720 freelances disponibles</p>
+        </article>
+
+        <article class="category-card">
+            <div class="icon">✍️</div>
+            <h3>Rédaction Tech</h3>
+            <p>+610 freelances disponibles</p>
+        </article>
+
+        <article class="category-card">
+            <div class="icon">☁️</div>
+            <h3>DevOps & Cloud</h3>
+            <p>+540 freelances disponibles</p>
+        </article>
+    </div>
+
+</section>
+<!-- section temoignages -->
+ <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+  <h2 class="text-center mb-5">Témoignages</h2>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/Black-Male-Student-1.webp" class="d-block w-100" alt="freelance1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Hamad Edine <br>Developpeur <br>⭐⭐⭐⭐⭐ </h5>
+        <p>travail propre et bien organise.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/freelane2.jpeg" class="d-block w-100" alt="freelane2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mouhamed Diom <br> Ingenieur informatique <br> ⭐⭐⭐⭐⭐ </h5>
+        <p>Serieux et rigoureux .</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/work-agency.jpg" class="d-block w-100" alt="Entreprise">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Entreprise MarkeSen <br>Entreprise de marketing <br> ⭐⭐⭐⭐</h5>
+        <p>recomander a 100%.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- section Appel a l'action -->
+  <section class="CTA-">
+     <p>VOUS CHERCHEZ UN TALENT FREELANCE OU UNE ENTREPRISE INSCRIVEZ-VOUS!</p>
+     <button><a href="">S'inscrire</a></button>
+    </section>
+</main>
+  <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>liens utiles</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"><a href="about.html">A propos de nous</a></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  ><a href="contact.html">contact</a></a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"><a href="freelances.html">Nos freelences</a></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"><a href="tarifs.html">Nos tarifs</a></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Ressources</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Tutoriels</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Etudes de cas</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Contact</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">+334561425</a>
+          </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >774691045</a>
+        </li>
+              <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">773413970</a>
+              </li>
+              <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary">AfriTalent@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-md-5 offset-md-1 mb-3">
+            <img src="images/logoAfriTalent.png" alt="logo" width="200px">
+            <p>AfriTalent vous aides a retrouver le meilleurs talents freelences d'Afrique</p>
+</div>
+</div>
+<div
+         class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2025 Company, Inc. All rights reserved.</p>
+<div class="social-icons">
+
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+</div>
+</div>
+
+      </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script> 
+<script src="js/main.js">
+</script>
 </body>
 </html>

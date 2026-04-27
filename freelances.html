@@ -3,6 +3,7 @@
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 <title>AfriTalent — freelances</title> 
 <link 
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
@@ -11,12 +12,291 @@ rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
+<!-- Barre de navigation commune a toutes les pages  -->
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+<div class="container"> 
+ <img src="images/logoAfriTalent.png" alt="logo-AfriTalent" width="100px">
+
+<a class="navbar-brand" href="index.html">AfriTalent</a> 
+
+     <button class="navbar-toggler" type="button" 
+     data-bs-toggle="collapse" 
+     data-bs-target="#navMenu" 
+     aria-controls="navMenu" 
+     aria-expanded="false" 
+     aria-label="Toggle navigation"> 
+<span class="navbar-toggler-icon">
+</span> 
+
+</button> 
+  <div class="collapse navbar-collapse" id="navMenu"> 
+  <ul class="navbar-nav ms-auto"> 
+<li class="nav-item">
+    <a class="nav-link active" href="index.html">Accueil</a>
+</li> 
+<li class="nav-item">
+    <a class="nav-link" href="freelances.html">Freelances</a>
+</li> 
+<li class="nav-item">
+    <a class="nav-link" href="tarifs.html">Tarifs</a>
+</li> 
+<li class="nav-item">
+   <a class="nav-link" href="about.html">A propos</a></li> 
+<li class="nav-item">
+   <a class="nav-link" href="contact.html">Contact</a>
+</li>
+   </ul> 
+   <button class="btn btn-primary ms-3"> Rejoindre AfriTalent
+</button>
+   </div> 
+   </div> 
+   </nav> 
+   <main>
+
+   <!-- section barre de recherche  -->
+
+    <section id="barre-de-recherche">
+      <div class="barre-recherche">
+     <input type="text" placeholder="rechercher">
+     <select>
+      <option value="">Choisir une catégorie</option>
+      <option value="">Developement web</option>
+      <option value="">Développement Mobile</option>
+      <option value="">Marketing</option>
+      <option value="">Data & IA</option>
+      <option value="">DevOps & Cloud</option>
+      <option value="">Rédaction Tech</option>
+      <option value="">Design UI/UX</option>
+      <option value="">Cybersécurité</option>
+       <option value="">Réseaux & Systèmes</option>
+</select>
+      </div>
+    </section>
+    <!-- section grille de profil  -->
+
+     <section class="card">
+    <div class="container my-5">
+  <div class="row g-4">
+<h2 class="text-center mb-5">Nos Freelances</h2>
+    <!-- grille numero 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membreF--.jpg" class="card-img-top" alt="photo">
+        <div class="card-body">
+          <h5 class="card-title">Awa Ndiaye</h5>
+          <p class="text-primary mb-1">UI/UX Designer</p>
+          <p class="card-text">Crée des interfaces modernes et intuitives centrées utilisateur.</p>
+          <p><strong>25 000 FCFA/h</strong></p>
+          <p>★★★★★</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membre--G.avif" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Moussa Diallo</h5>
+          <p class="text-primary mb-1">Développeur Web</p>
+          <p class="card-text">Spécialiste React et Bootstrap pour sites performants.</p>
+          <p><strong>30 000 FCFA/h</strong></p>
+          <p>★★★★☆</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 3  -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membre--f.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Fatou Ba</h5>
+          <p class="text-primary mb-1">Marketing Digital</p>
+          <p class="card-text">Gestion de campagnes et croissance sur réseaux sociaux.</p>
+          <p><strong>20 000 FCFA/h</strong></p>
+          <p>★★★★☆</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 4 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membreG.avif" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Ibrahima Kane</h5>
+          <p class="text-primary mb-1">Rédacteur Web</p>
+          <p class="card-text">Rédaction SEO optimisée pour blogs et sites web.</p>
+          <p><strong>15 000 FCFA/h</strong></p>
+          <p>★★★★☆</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 5 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membrefill.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Seynabou Fall</h5>
+          <p class="text-primary mb-1">Développeuse Back-end</p>
+          <p class="card-text">API sécurisées et gestion de bases de données.</p>
+          <p><strong>35 000 FCFA/h</strong></p>
+          <p>★★★★★</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 6 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membre.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Cheikh Gueye</h5>
+          <p class="text-primary mb-1">Graphiste</p>
+          <p class="card-text">Création de logos et identité visuelle professionnelle.</p>
+          <p><strong>18 000 FCFA/h</strong></p>
+          <p>★★★★☆</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 7 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/membre-f.avif" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Marieme Sow</h5>
+          <p class="text-primary mb-1">SEO Expert</p>
+          <p class="card-text">Optimisation Google et stratégie de référencement.</p>
+          <p><strong>28 000 FCFA/h</strong></p>
+          <p>★★★★★</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 8 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="images/GM.avif" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Abdou Cisse</h5>
+          <p class="text-primary mb-1">Copywriter</p>
+          <p class="card-text">Textes persuasifs pour landing pages et ventes.</p>
+          <p><strong>22 000 FCFA/h</strong></p>
+          <p>★★★★☆</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- grille numero 9 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
+        <img src="images/membre--ff.avif" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Ndeye Diop</h5>
+          <p class="text-primary mb-1">Full Stack Developer</p>
+          <p class="card-text">Applications web complètes de A à Z.</p>
+          <p><strong>40 000 FCFA/h</strong></p>
+          <p>★★★★★</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- footer commun a toutes les pages  -->
+
+<footer class="py-5">
+              <div class="row">
+              <div class="col-6 col-md-2 mb-3">
+              <h5>liens utiles</h5>
+              <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+               <a href="#" class="nav-link p-0 text-body-secondary"><a href="about.html">A propos de nous</a></a>
+               </li>
+               <li class="nav-item mb-2">
+               <a href="#" class="nav-link p-0 text-body-secondary"><a href="contact.html">contact</a></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"><a href="freelances.html">Nos freelences</a></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"><a href="tarifs.html">Nos tarifs</a></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Ressources</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Tutoriels</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Etudes de cas</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Contact</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">+334561425</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >774691045</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">773413970</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">AfriTalent@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1 mb-3">
+            <img src="images/logoAfriTalent.png" alt="logo" width="200px">
+            <p>AfriTalent vous aides a retrouver le meilleurs talents freelences d'Afrique</p>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>&copy; 2025 Company, Inc. All rights reserved.</p>
+<div class="social-icons">
+
+     <a href="#"><i class="bi bi-facebook"></i></a>
+     <a href="#"><i class="bi bi-twitter"></i></a>
+     <a href="#"><i class="bi bi-linkedin"></i></a>
+     <a href="#"><i class="bi bi-instagram"></i></a>
+</div>
+</div>
+ </footer>
+     
 <script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
 <script src="js/main.js"></script>
-    
 </body>
 </html>
