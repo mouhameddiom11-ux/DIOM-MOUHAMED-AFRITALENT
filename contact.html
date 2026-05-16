@@ -50,66 +50,137 @@ rel="stylesheet">
    <button class="btn btn-primary ms-3"> Rejoindre AfriTalent
 </button>
 <div class="btn-mode">
+  
 <button onclick="toggleDarkMode()">🌙</button>
-</div>
+   </div>
    </div> 
    </div> 
    </nav> 
-   <!-- section formulaire de contact  -->
-    
+
     <main>
-   <section class="formulaire">
-      <div class="contact">
-        <h2 class="text-center mb-5">Nous contacter</h2>
- <form>
 
-    <label>Nom</label><br>
-    <input type="text" name="nom" required><br>
-    <small></small><br>
+       <!-- section formulaire de contact  -->
+<section id="contact">
 
-    <label>Prénom</label><br>
-    <input type="text" name="prenom" required><br>
-    <small></small><br>
+  <div class="container form-container">
 
-    <label>Email</label><br>
-    <input type="email" name="email" required><br>
-    <small></small><br>
+    <h2 class="text-center mb-5">Contactez-nous</h2>
 
-    <label>Sujet</label><br>
-    <select name="sujet" required>
-      <option value="">-- Choisir un sujet --</option>
-      <option value="support">Support</option>
-      <option value="partenariat">Partenariat</option>
-      <option value="freelance">Freelance</option>
-      <option value="autre">Autre</option>
-    </select><br>
-    <small></small><br>
+    <div class="row g-4 align-items-start">
 
-    <label>Message</label><br>
-    <textarea name="message" rows="5" required></textarea><br>
-    <small></small><br>
+      <!-- FORMULAIRE -->
+      <div class="col-lg-6">
 
-    <button type="submit">Envoyer</button>
+        <form>
 
-  </form>
-  <hr>
-  <div class="Informations">
-    <h3>Informations de contact</h3>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" placeholder="Votre nom" maxlength="30">
+          </div>
 
-    <p>Email : contact@afritalent.com</p>
-    <p>Téléphone : +221 77 123 45 67</p>
-    <p>Adresse : Dakar, Sénégal</p>
+          <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" maxlength="30">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Votre email" maxlength="50">
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Votre message" maxlength="200"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Envoyer
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- INFORMATIONS -->
+
+      <div class="col-lg-6">
+
+        <div class="information">
+
+          <h3 class="mb-3">Informations de contact</h3>
+
+          <p class="afri-contact-text">
+            Une question, un projet ou simplement un bonjour ?<br>
+            Écrivez-nous, nous vous répondrons rapidement.
+          </p>
+
+          <!-- EMAIL -->
+          <div class="afri-contact-item">
+            <div class="afri-contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div>
+              <h5>Email</h5>
+              <span>AfriTalent@gmail.com</span>
+            </div>
+          </div>
+
+          <!-- TELEPHONE -->
+
+          <div class="afri-contact-item">
+            <div class="afri-contact-icon">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div>
+              <h5>Téléphone</h5>
+              <span>+221 77 3413970</span>
+            </div>
+          </div>
+
+          <!-- ADRESSE -->
+          <div class="afri-contact-item">
+              <div class="afri-contact-icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div>
+              <h5>Adresse</h5>
+              <span>Dakar, Sénégal</span>
+           </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+</section>
+
+   <!-- section iframe  -->
+
+   <section id="localisation" class="py-5">
+  <div class="container">
+
+    <h2 class="text-center mb-5">Notre localisation</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+
+        <p>
+          Nous sommes basés à Dakar, Sénégal. Venez nous rendre visite ou contactez-nous pour toute question.
+        </p>
+
+        <div class="ratio ratio-16x9 mt-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2!2d-17.4677!3d14.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172c3a3a3a3a3%3ADakar!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2s!4v0000000000"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
 
   </div>
-      </div>
-   </section>
-   <!-- section iframe  -->
-   <section id="iframe">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2!2d-17.4677!3d14.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172c3a3a3a3a3%3ADakar!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2s!4v0000000000"
-frameborder="0">
-
-   </iframe>
-   </section>
+</section>
     </main>
     <!-- footer commun a toutes les pages  -->
     <footer class="site-footer bg-dark text-light pt-5 pb-3">
@@ -139,6 +210,7 @@ frameborder="0">
       </div>
 
       <!-- Colonne 3 : Liens utiles -->
+
       <div class="col-md-3">
         <h5 class="fw-bold mb-3">Liens utiles</h5>
         <ul class="list-unstyled">
@@ -150,6 +222,7 @@ frameborder="0">
       </div>
 
       <!-- Colonne 4 : Logo + description -->
+
       <div class="col-md-3">
         <img src="images/logoAfriTalent.png" alt="AfriTalent" style="width: 150px;">
         <p class="mt-3">
@@ -160,6 +233,7 @@ frameborder="0">
     </div>
 
     <!-- Ligne du bas -->
+
     <hr class="border-light mt-4">
 
     <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -168,6 +242,7 @@ frameborder="0">
       </p>
 
       <!-- Réseaux sociaux -->
+
       <div class="footer-social">
         <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
         <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
