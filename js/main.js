@@ -117,9 +117,109 @@ if (scrollBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+// validation du formulaire de contact
+
+const form = document.querySelector(".contact-form");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nom = document.getElementById("name");
+    const prenom = document.getElementById("prenom");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    const nameError = document.getElementById("nameError");
+    const prenomError = document.getElementById("prenomError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+    const successMessage = document.getElementById("successMessage");
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    prenomError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+    successMessage.textContent = "";
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (nom.value.trim().length < 2) {
+      nameError.textContent = "Le nom doit contenir au moins 2 caractères.";
+      isValid = false;
+    }
+
+    if (prenom.value.trim().length < 2) {
+      prenomError.textContent = "Le prénom doit contenir au moins 2 caractères.";
+      isValid = false;
+    }
+
+    if (!emailRegex.test(email.value.trim())) {
+      emailError.textContent = "Adresse email invalide.";
+      isValid = false;
+    }
+
+    if (message.value.trim().length < 20) {
+      messageError.textContent = "Le message doit contenir au moins 20 caractères.";
+      isValid = false;
+    }
+
+    if (isValid) {
+      successMessage.textContent = "Message envoyé avec succès !";
+      form.reset();
+    }
+  });
+}
+
+/* ================================================
+    filtre de recherche pour les freelances
+   ================================================ */
+
+const initFreelanceFiltering = () => {
+  const searchInput = document.getElementById('freelance-search');
+  const categorySelect = document.getElementById('freelance-category');
+  const statusText = document.getElementById('freelance-status');
+  const freelanceCards = Array.from(document.querySelectorAll('.freelance-card'));
+
+  if (!searchInput || !categorySelect || freelanceCards.length === 0) {
+    return;
+  }
+
+  const updateFreelanceFilter = () => {
+    const query = searchInput.value.trim().toLowerCase();
+    const selectedCategory = categorySelect.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    freelanceCards.forEach((card) => {
+      const name = card.querySelector('.card-title')?.textContent.trim().toLowerCase() || '';
+      const category = card.dataset.category?.trim().toLowerCase() || '';
+      const description = card.querySelector('.card-text')?.textContent.trim().toLowerCase() || '';
+
+      const matchesCategory = !selectedCategory || category === selectedCategory;
+      const matchesQuery = !query || name.includes(query) || category.includes(query) || description.includes(query);
+      const visible = matchesCategory && matchesQuery;
+
+      card.style.display = visible ? '' : 'none';
+      if (visible) visibleCount += 1;
+    });
+
+    if (statusText) {
+      statusText.textContent = visibleCount > 0
+        ? `${visibleCount} freelance${visibleCount > 1 ? 's' : ''} trouvé${visibleCount > 1 ? 's' : ''}`
+        : 'Aucun freelance ne correspond à votre recherche.';
+    }
+  };
+
+  searchInput.addEventListener('input', updateFreelanceFilter);
+  categorySelect.addEventListener('change', updateFreelanceFilter);
+  updateFreelanceFilter();
+};
 
 /* ================================================
    INIT
    ================================================ */
 
 initThemeToggle();
+initFreelanceFiltering();

@@ -481,11 +481,11 @@ body.light-mode .category-card:hover {
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
-.carousel-control-prev,
+/* .carousel-control-prev,
 .carousel-control-next { width: 8%; }
 
 .carousel-control-prev-icon,
-.carousel-control-next-icon { background-size: 70%; }
+.carousel-control-next-icon { background-size: 70%; } */
 
 .carousel-indicators button {
   width: 10px !important;
@@ -650,7 +650,7 @@ footer img { width: auto; max-width: 150px; }
 .card-body .btn { margin-top: auto; }
 
 .card-title {
-  color: var(--text-primary);
+  color: var(--gold);
   font-family: var(--font-title);
   text-align: center;
 }
@@ -661,7 +661,9 @@ footer img { width: auto; max-width: 150px; }
 
 .Nos-freelences .card-body { align-items: center; }
 .Nos-freelences .card-body p { text-align: center; }
-
+.btn btn-primary {
+color: var(--text-on-gold);
+}
 /* ==============================================
    PAGE 3 — TARIFS
    ============================================== */
@@ -827,7 +829,7 @@ body.light-mode .col-md-4 .card.featured {
   font-family: var(--font-body);
   line-height: 1.8;
   text-align: justify;
-  font-weight: 400;
+  font-weight: 600;
   margin-left: 20px;
 }
 
@@ -846,7 +848,7 @@ body.light-mode .col-md-4 .card.featured {
   object-fit: cover;
 }
 
-.card h4, .card h3 { color: var(--text-primary); }
+.card h4 { color: var(--gold); }
 
 .card-body p {
   display: flex;

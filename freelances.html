@@ -63,20 +63,22 @@ rel="stylesheet">
 
     <section id="barre-de-recherche">
       <div class="barre-recherche">
-     <input type="text" placeholder="rechercher">
-     <select>
-      <option value="">Choisir une catégorie</option>
-      <option value="">UI/UX Desingner</option>
-      <option value="">Développeur Web</option>
-      <option value="">Marketing Digital</option>
-      <option value="">Redacteur</option>
-      <option value="">DevOps & Cloud</option>
-      <option value="">Rédaction Tech</option>
-      <option value="">Design UI/UX</option>
-      <option value="">Cybersécurité</option>
-      <option value="">Réseaux & Systèmes</option>
-</select>
+        <input id="freelance-search" type="text" placeholder="Rechercher un freelance, une compétence..." aria-label="Recherche de freelance">
+        <select id="freelance-category" aria-label="Filtrer par catégorie">
+          <option value="">Toutes les catégories</option>
+          <option value="UI/UX Designer">UI/UX Designer</option>
+          <option value="Développeur Web">Développeur Web</option>
+          <option value="Marketing Digital">Marketing Digital</option>
+          <option value="Rédacteur Web">Rédacteur Web</option>
+          <option value="Développeuse Back-end">Développeuse Back-end</option>
+          <option value="Graphiste">Graphiste</option>
+          <option value="SEO Expert">SEO Expert</option>
+          <option value="Copywriter">Copywriter</option>
+          <option value="Full Stack Developer">Full Stack Developer</option>
+          <option value="Réseaux & Systèmes">Réseaux & Systèmes</option>
+        </select>
       </div>
+      <div id="freelance-status" class="text-center mt-3" aria-live="polite"></div>
     </section>
     <!-- section grille de profil  -->
 
@@ -87,147 +89,146 @@ rel="stylesheet">
 
     <!-- grille numero 1 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="UI/UX Designer">
       <div class="card h-100 ">
         <img src="images/membreF--.jpg" class="card-img-top" alt="photo">
         <div class="card-body ">
           <h5 class="card-title">Awa Ndiaye</h5>
-          <p class="text-primary mb-1"><strong>UI/UX Designer</strong></p>
+          <p class="mb-1"><strong>UI/UX Designer</strong></p>
           <p class="card-text">Crée des interfaces modernes et intuitives centrées utilisateur.</p>
           <p><strong>550 000 FCFA/h</strong></p>
           <p>★★★★★</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 2 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Développeur Web">
       <div class="card h-100">
         <img src="images/membre--G.avif" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Moussa Diallo</h5>
-          <p class="text-primary mb-1"><strong>Développeur Web</strong></p>
+          <p class=" mb-1"><strong>Développeur Web</strong></p>
           <p class="card-text">Spécialiste React et Bootstrap pour sites performants.</p>
           <p><strong>300000 FCFA/h</strong></p>
           <p>★★★★☆</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 3  -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Marketing Digital">
       <div class="card h-100">
         <img src="images/membre--f.jpg" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Fatou Ba</h5>
-          <p class="text-primary mb-1"><strong>Marketing Digital</strong></p>
+          <p class="mb-1"><strong>Marketing Digital</strong></p>
           <p class="card-text">Gestion de campagnes et croissance sur réseaux sociaux.</p>
           <p><strong>200 000 FCFA/h</strong></p>
           <p>★★★★☆</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 4 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Rédacteur Web">
       <div class="card h-100">
         <img src="images/membreG.avif" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Ibrahima Kane</h5>
-          <p class="text-primary mb-1"><strong>Rédacteur Web</strong></p>
+          <p class="mb-1"><strong>Rédacteur Web</strong></p>
           <p class="card-text">Rédaction SEO optimisée pour blogs et sites web.</p>
           <p><strong>250 000 FCFA/h</strong></p>
           <p>★★★★☆</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 5 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Développeuse Back-end">
       <div class="card h-100">
         <img src="images/membrefill.jpg" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Seynabou Fall</h5>
-          <p class="text-primary mb-1"><strong>Développeuse Back-end</strong></p>
+          <p class="mb-1"><strong>Développeuse Back-end</strong></p>
           <p class="card-text">API sécurisées et gestion de bases de données.</p>
           <p><strong>350 000 FCFA/h</strong></p>
           <p>★★★★★</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 6 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Graphiste">
       <div class="card h-100">
         <img src="images/membre.webp" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Cheikh Gueye</h5>
-          <p class="text-primary mb-1"><strong>Graphiste</strong></p>
+          <p class="mb-1"><strong>Graphiste</strong></p>
           <p class="card-text">Création de logos et identité visuelle professionnelle.</p>
           <p><strong>185 000 FCFA/h</strong></p>
           <p>★★★★☆</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 7 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="SEO Expert">
       <div class="card h-100">
         <img src="images/membre-f.avif" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Marieme Sow</h5>
-          <p class="text-primary mb-1"><strong>SEO Expert</strong></p>
+          <p class=" mb-1"><strong>SEO Expert</strong></p>
           <p class="card-text">Optimisation Google et stratégie de référencement.</p>
           <p><strong>500 000 FCFA/h</strong></p>
           <p>★★★★★</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 8 -->
 
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Copywriter">
       <div class="card h-100">
         <img src="images/GM.avif" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Abdou Cisse</h5>
-          <p class="text-primary mb-1"><strong>Copywriter</strong></p>
+          <p class="mb-1"><strong>Copywriter</strong></p>
           <p class="card-text">Textes persuasifs pour landing pages et ventes.</p>
           <p><strong>220 000 FCFA/h</strong></p>
           <p>★★★★☆</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+          <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
         </div>
       </div>
     </div>
 
     <!-- grille numero 9 -->
      
-<div class="col-12 col-md-6 col-lg-4">
-<div class="card h-100">
-  
-        <img src="images/membre--ff.avif" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Ndeye Diop</h5>
-          <p class="text-primary mb-1"><strong>Full Stack Developer</strong></p>
-          <p class="card-text">Applications web complètes de A à Z.</p>
-          <p><strong>400 000 FCFA/h</strong></p>
-          <p>★★★★★</p>
-          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
-</div>
-</div>
+<div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="Full Stack Developer">
+  <div class="card h-100">
+    <img src="images/membre--ff.avif" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">Ndeye Diop</h5>
+      <p class="mb-1"><strong>Full Stack Developer</strong></p>
+      <p class="card-text">Applications web complètes de A à Z.</p>
+      <p><strong>400 000 FCFA/h</strong></p>
+      <p>★★★★★</p>
+      <a href="#" class="btn btn-primary w-100 text-dark">Voir le profil</a>
+    </div>
+  </div>
 </div>
 </div>
 </div>

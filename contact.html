@@ -71,31 +71,36 @@ rel="stylesheet">
       <!-- FORMULAIRE -->
       <div class="col-lg-6">
 
-        <form>
+        <form class="contact-form">
 
           <div class="mb-3">
             <label for="name" class="form-label">Nom</label>
             <input type="text" class="form-control" id="name" placeholder="Votre nom" maxlength="30">
+            <small id="nameError" class="text-danger"></small>
           </div>
 
           <div class="mb-3">
             <label for="prenom" class="form-label">Prénom</label>
             <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" maxlength="30">
+            <small id="prenomError" class="text-danger"></small>
           </div>
 
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Votre email" maxlength="50">
+            <small id="emailError" class="text-danger"></small>
           </div>
 
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control" id="message" rows="5" placeholder="Votre message" maxlength="200"></textarea>
+            <small id="messageError" class="text-danger"></small>
           </div>
 
           <button type="submit" class="btn btn-primary w-100">
             Envoyer
           </button>
+          <small id="successMessage" class="text-success d-block mt-3"></small>
 
         </form>
 
