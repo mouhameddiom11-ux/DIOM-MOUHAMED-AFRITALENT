@@ -1,38 +1,29 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Oswald:wght@200..700&display=swap');
 
-/* reset css  */
 
    /* VARIABLES — DARK MODE  */
 :root {
-  /* Or */
-  --gold:        #C9A84C;   /* or principal, fonds boutons */
-  --gold-dark:   #A07830;   /* or foncé, hover */
-  --gold-light:  #E8C97A;   /* or clair, titres sur fond sombre */
-  --gold-subtle: rgba(201, 168, 76, 0.12); /* teinture légère */
-  --gold-border: rgba(201, 168, 76, 0.22); /* bordures */
+  --gold:        #C9A84C;  
+  --gold-dark:   #A07830; 
+  --gold-light:  #E8C97A;   
+  --gold-subtle: rgba(201, 168, 76, 0.12); 
+  --gold-border: rgba(201, 168, 76, 0.22); 
 
-  /* Fonds */
-  --bg-color:    #0A0A0A;   /* fond page */
-  --card-bg:     #141414;   /* fond card */
-  --surface:     #1C1C1C;   /* fond élevé (modals, accordéons) */
 
-  /* Textes */
-  --text-primary:   #F0EAD6; /* texte principal — crème chaud */
-  --text-secondary: #B8A98A; /* texte secondaire — or pâle */
-  --text-on-gold:   #0A0A0A; /* texte sur fond doré (boutons) */
-  --text-muted:     #6B6050; /* texte désactivé */
+  --bg-color:    #0A0A0A;   
+  --card-bg:     #141414;   
+  --surface:     #1C1C1C;   
 
-  /* Couleurs sémantiques (success, info, etc.) */
-  --color-success: #4CAF7A;
-  --color-danger:  #E05A5A;
+  --text-primary:   #F0EAD6; 
+  --text-secondary: #B8A98A; 
+  --text-on-gold:   #0A0A0A; 
+  --text-muted:     #6B6050;
 
-  /* Misc */
   --navbar-height: 85px;
   --font-title: 'Goldman', sans-serif;
   --font-body:  'Inter', sans-serif;
 
-  /* Rétrocompatibilité (anciens noms utilisés dans le HTML) */
   --primary-color: var(--gold);
   --main-color:    var(--gold-dark);
   --text-color:    var(--text-primary);
@@ -51,18 +42,15 @@ body.light-mode {
   --gold-subtle: rgba(138, 94, 16, 0.08);
   --gold-border: rgba(138, 94, 16, 0.30);
 
-  /* Fonds — bien différenciés */
-  --bg-color:    #F2ECD8;   /* fond page : crème moyen */
-  --card-bg:     #bfb489;   /* fond card : blanc cassé chaud */
-  --surface:     #EDE5C8;   /* fond élevé : crème foncé */
+  --bg-color:    #F2ECD8;   
+  --card-bg:     #bfb489;   
+  --surface:     #EDE5C8;  
 
-  /* Textes — tous sombres et lisibles */
-  --text-primary:   #a7790d;   /* quasi-noir */
-  --text-secondary: #4A3510;   /* brun foncé */
-  --text-on-gold:   #FFFFFF;   /* blanc sur or */
-  --text-muted:     #7A6440;   /* brun moyen */
+  --text-primary:   #a7790d;   
+  --text-secondary: #4A3510;   
+  --text-on-gold:   #FFFFFF;   
+  --text-muted:     #7A6440;   
 
-  /* Rétrocompatibilité */
   --primary-color: var(--gold);
   --main-color:    var(--gold-dark);
   --text-color:    var(--text-primary);
@@ -76,7 +64,7 @@ body.light-mode {
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* bordures paddings inclus dans la taille de l'element  */
 }
 
 body {
@@ -84,14 +72,26 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  animation: fadeInPage 0.7s ease forwards;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide sur bg-color et couleur (0.3s) */
+  animation: fadeInPage 0.7s ease forwards;  /* Animation d'entrée fadeInPage (0.7s, garde état final) */ 
 }
+
+/* Les sections qui apparaissent en fondu à l'entrée dans le viewport */
 
 @keyframes fadeInPage {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to { opacity: 4; }
 }
+/* animation shake  */
+
+ @keyframes shake { 
+  0% { transform: translateX(0); } 
+  25% { transform: translateX(10px); } 
+  50% { transform: translateX(-10px); } 
+  75% { transform: translateX(10px); } 
+  100% { transform: translateX(0); } 
+}
+
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-title);
@@ -99,8 +99,8 @@ h1, h2, h3, h4, h5 {
   color: var(--text-primary);
 }
 
-/* ==============================================
-   NAVBAR
+ /* ==============================================
+            NAVBAR
    ============================================== */
 .logo-AfriTalent {
   height: 70px;
@@ -150,9 +150,7 @@ header {
 /* Effet scroll navbar */
 .home-page nav.navbar {
   background: transparent !important;
-  transition: background 0.3s ease, box-shadow 0.3s ease,
-   backdrop-filter 0.3s ease, padding 0.3s ease;
-  padding: 1rem 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease,backdrop-filter 0.3s ease, padding 0.3s ease; padding: 1rem 0;  /* Anime en douceur 4 propriétés sur 0.3 secondes avec une courbe ease (démarrage rapide, fin progressive)  */
 }
 
 .home-page nav.navbar.scrolled {
@@ -160,6 +158,10 @@ header {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(16px);
   padding: 0.7rem 0;
+}
+nav.navbar.scrolled .btn-primary {
+  color: var(--bg-color) !important;
+  background: var(--gold) !important;
 }
 
 body.light-mode .home-page nav.navbar.scrolled {
@@ -180,9 +182,10 @@ body.light-mode nav.navbar .nav-link.active {
 
 nav.navbar.scrolled .navbar-brand,
 nav.navbar.scrolled .nav-link,
-nav.navbar.scrolled .btn-mode button {
+nav.navbar.scrolled {
   color: var(--text-primary) !important;
 }
+
 
 /* ==============================================
    SECTION HERO
@@ -215,17 +218,19 @@ nav.navbar.scrolled .btn-mode button {
 }
 
 /* Texte hero : toujours blanc sur l'image sombre */
+
 .texte-Hero h1 {
   font-size: 3.5rem;
   font-weight: 700;
   color: #F0EAD6;
   margin-bottom: 20px;
   line-height: 1.2;
+  margin-top: 20px;
 }
 
 .texte-Hero h2 {
   font-size: 1.5rem;
-  color: #D4C49A; /* crème dorée — lisible sur image */
+  color: #D4C49A; 
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -248,7 +253,7 @@ nav.navbar.scrolled .btn-mode button {
 .btn-Hero .btn-primary {
   background-color: var(--gold);
   border-color: var(--gold);
-  color: #0A0A0A; /* noir sur or — contraste élevé */
+  color: #0A0A0A; 
   font-weight: 700;
 }
 
@@ -258,6 +263,7 @@ nav.navbar.scrolled .btn-mode button {
   color: #F0EAD6;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(201, 168, 76, 0.35);
+ animation: shake 0.5s; 
 }
 
 /* Outline button secondaire */
@@ -294,7 +300,7 @@ nav.navbar.scrolled .btn-mode button {
 
 .stat-box h2 {
   font-size: 2.5rem;
-  color: var(--gold-light); /* or clair — lisible sur noir */
+  color: var(--gold-light); 
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -316,29 +322,41 @@ nav.navbar.scrolled .btn-mode button {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 180px;
+  grid-auto-rows: minmax(180px, auto);
   gap: 20px;
   padding: 20px;
+  align-items: stretch;
 }
 
 .bento-grid article {
   padding: 20px;
   border-radius: 20px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--card-bg);
   border: 1px solid var(--gold-border);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .bento-grid p {
-  color: var(--text-secondary); 
-  text-align: justify;
+  color: var(--text-secondary);
+  text-align: left;
+  line-height: 1.5;
+  margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   hyphens: auto;
 }
 
-.bento-grid h3, .bento-grid h4 {
+.bento-grid h3 {
   color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .step-number {
@@ -468,24 +486,18 @@ body.light-mode .category-card:hover {
   border-radius: 25px;
 }
 
-.carousel-caption h5 {
+.carousel-caption h4 {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #F0EAD6; /* blanc crème — lisible sur image sombre */
+  color: var(--gold); 
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .carousel-caption p {
   font-size: 1.1rem;
-  color: var(--gold-light); /* or clair — visible sur image */
+  color: var(--gold-light); 
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
-
-/* .carousel-control-prev,
-.carousel-control-next { width: 8%; }
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon { background-size: 70%; } */
 
 .carousel-indicators button {
   width: 10px !important;
@@ -499,7 +511,7 @@ body.light-mode .category-card:hover {
 }
 
 /* ==============================================
-   CTA
+                      CTA
    ============================================== */
 .CTA {
   background: linear-gradient(135deg, #C9A84C 0%, #8A6020 100%);
@@ -513,7 +525,7 @@ body.light-mode .category-card:hover {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--font-title);
-  color: #0A0A0A; /* noir sur or — contraste max */
+  color: #0A0A0A; 
 }
 
 .btn-cta {
@@ -537,9 +549,15 @@ body.light-mode .category-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* ==============================================
-   FOOTER
-   ============================================== */
+           /* ==============================================
+                           FOOTER
+            ============================================== */
+
+footer.site-footer {
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
 footer .container { max-width: 1180px; }
 
 footer ul { list-style: none; margin: 0; padding: 0; }
@@ -550,7 +568,7 @@ footer li {
   margin-bottom: 0.55rem;
 }
 
-footer h5 {
+footer h3 {
   color: var(--gold);
   font-size: 1.9rem;
   margin-bottom: 1rem;
@@ -565,6 +583,21 @@ footer p, footer a {
 footer li { color: var(--text-secondary); }
 
 footer a:hover { color: var(--gold); }
+
+body.light-mode footer {
+  background-color: #f7e5aa;
+  color: var(--text-primary);
+}
+
+body.light-mode footer h3 {
+  color: var(--gold-dark);
+}
+
+body.light-mode footer p,
+body.light-mode footer a,
+body.light-mode footer li {
+  color: var(--text-secondary);
+}
 
 .footer-bottom {
   display: flex;
@@ -581,9 +614,9 @@ footer a:hover { color: var(--gold); }
 
 footer img { width: auto; max-width: 150px; }
 
-/* ==============================================
-   PAGE 2 — FREELANCES
-   ============================================== */
+            /* ==============================================
+                    PAGE 2 — FREELANCES
+             ============================================== */
 #barre-de-recherche {
   padding: 20px;
   margin-top: var(--navbar-height);
@@ -695,19 +728,15 @@ body.light-mode .col-md-4 .card.featured {
   background: linear-gradient(180deg, #FFF5DC 0%, #FFFFFF 100%);
 }
 
-/* Prix dans les cards tarif */
 .col-md-4 .card .price {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--gold); /* or sur fond sombre — lisible */
-  font-family: var(--font-title);
+  color: var(--gold);
 }
 
 /* Bouton dans les cards tarif */
 .col-md-4 a {
   background-color: var(--gold);
   font-weight: 700;
-  color: #0A0A0A; /* noir sur or */
+  color: #0A0A0A; 
   border-radius: 30px;
   padding: 10px 24px;
   display: inline-block;
@@ -750,11 +779,9 @@ body.light-mode .col-md-4 .card.featured {
 }
 
 /* Icône accordion Bootstrap */
-.accordion-button::after {
-  filter: invert(75%) sepia(40%) saturate(400%) hue-rotate(5deg);
-}
 
 /* Bouton ouvert */
+
 .accordion-button:not(.collapsed) {
   background: var(--gold);
   color: #0A0A0A;
@@ -833,7 +860,10 @@ body.light-mode .col-md-4 .card.featured {
   margin-left: 20px;
 }
 
-/* Notre équipe */
+/*=========================
+      Notre équipe 
+ ==============================*/
+ 
 .A-propos { background: var(--bg-color); }
 
 .card-container {
@@ -848,7 +878,7 @@ body.light-mode .col-md-4 .card.featured {
   object-fit: cover;
 }
 
-.card h4 { color: var(--gold); }
+.card h3 { color: var(--gold); }
 
 .card-body p {
   display: flex;
@@ -870,17 +900,45 @@ body.light-mode .col-md-4 .card.featured {
 .card-body a:hover { color: var(--gold); }
 
 /* Valeurs */
+
 .valeurs h2 {
-  color: var(--gold);
   font-size: 2.5em;
-  margin-bottom: 20px;
   text-align: center;
+  margin: 50px 0 20px;
 }
 
 .valeurs-container {
   display: flex;
-  gap: 80px;
   justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  margin-bottom: 20px;
+}
+
+.valeur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.valeur i {
+  font-size: 2.5rem;
+}
+
+.valeur h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.valeur p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* ==============================================
@@ -979,7 +1037,7 @@ label {
   height: 45px;
   min-width: 45px;
   background: var(--gold);
-  color: #121111; /* noir sur or */
+  color: #121111; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1004,9 +1062,9 @@ label {
   margin-bottom: 20px;
 }
 
-/* ==============================================
-   LOCALISATION
-   ============================================== */
+           /* ==============================================
+                     LOCALISATION
+            ============================================== */
 #localisation {
   background-color: var(--bg-color);
   padding: 60px 0;
@@ -1047,7 +1105,9 @@ label {
 ========================= */
 
 @media (max-width: 378px) {
-
+     p{
+        font-size: 0.9rem;
+     }
     .Hero {
         padding: 40px 15px;
     }
@@ -1097,6 +1157,19 @@ label {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
+        grid-auto-rows: minmax(180px, auto);
+    }
+
+    .bento-grid article {
+        min-height: auto;
+        overflow: visible;
+        padding: 18px;
+    }
+
+    .bento-grid p {
+        text-align: left;
+        font-size: 0.95rem;
+        line-height: 1.45;
     }
 
     .card1,
@@ -1105,6 +1178,7 @@ label {
     .card4 {
         grid-column: span 1;
         grid-row: span 1;
+        width: 100%;
     }
 
     .categories-grid {
@@ -1118,12 +1192,32 @@ label {
     }
 
     .carousel-item img {
-        height: 250px;
+        height: 320px;
         object-fit: cover;
     }
 
     .carousel-caption {
+        display: block !important;
+        position: static;
+        margin: 8px 6px 0;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(5, 5, 5, 0.78);
+        text-align: center;
         font-size: 0.8rem;
+    }
+
+    .carousel-caption h3,
+    .carousel-caption h4 {
+        color: #fff;
+        text-shadow: none;
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        color: #fff;
+        text-shadow: none;
+        font-size: 0.85rem;
     }
 
     .CTA {
@@ -1141,9 +1235,8 @@ label {
         text-align: center;
         margin-top: 15px;
     }
-
-    section {
-        padding: 50px 15px;
+    .carousel-caption h4 {
+        font-size: 1.5rem;
     }
 
     h2 {
@@ -1169,6 +1262,14 @@ label {
         display: grid;
         grid-template-columns: 1fr;
     }
+    .valeurs h3{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .valeurs h2 {
+        font-size: 1.5rem;
+    }
 }
 #scrollTopBtn{
   position: fixed;
@@ -1179,7 +1280,7 @@ label {
   border: none;
   border-radius: 50%;
   background: var(--main-color);
-  color:white;
+  color:black;
   font-size: 25px;
  opacity: 0;
  visibility: hidden;
@@ -1227,6 +1328,17 @@ label {
 
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(180px, auto);
+    }
+
+    .bento-grid article {
+        overflow: visible;
+        min-height: auto;
+    }
+
+    .bento-grid p {
+        font-size: 0.95rem;
+        line-height: 1.45;
     }
 
     .card1,
@@ -1245,7 +1357,27 @@ label {
     }
 
     .carousel-caption {
+        display: block !important;
+        position: static;
+        margin: 10px 10px 0;
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: rgba(5, 5, 5, 0.72);
+        text-align: center;
         font-size: 0.9rem;
+    }
+
+    .carousel-caption h3,
+    .carousel-caption h4 {
+        color: #fff;
+        text-shadow: none;
+        font-size: 1.05rem;
+    }
+
+    .carousel-caption p {
+        color: #fff;
+        text-shadow: none;
+        font-size: 0.95rem;
     }
 
     .Notre-Histoire-container {
@@ -1306,6 +1438,17 @@ label {
 
     .bento-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: minmax(180px, auto);
+    }
+
+    .bento-grid article {
+        overflow: visible;
+        min-height: auto;
+    }
+
+    .bento-grid p {
+        font-size: 1rem;
+        line-height: 1.45;
     }
 
     .categories-grid {
