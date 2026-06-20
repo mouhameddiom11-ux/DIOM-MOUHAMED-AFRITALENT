@@ -21,7 +21,8 @@ const getPreferredTheme = () => {
 const applyTheme = (theme) => {
   if (theme === 'light') {
     document.body.classList.add('light-mode');
-  } else {
+  }
+   else {
     document.body.classList.remove('light-mode');
   } // si le thème est 'light', on ajoute la classe 'light-mode' au body
 

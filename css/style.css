@@ -1252,7 +1252,10 @@ label {
         grid-template-columns: 1fr;
     }
     .text-Notre-histoire p{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        margin :auto ;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .card-container{
         display: grid;

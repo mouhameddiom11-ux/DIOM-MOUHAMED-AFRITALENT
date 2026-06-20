@@ -17,9 +17,9 @@ Promotion : L1 IAGE — ISI
 
 ---
 
-## 🚀 Démo en ligne
+## 🚀 En ligne
 
-🔗 [Voir le site sur GitHub Pages](https://NOM-PRENOM.github.io/NOM-Prenom-AfriTalent/)
+🔗 [Voir le site sur GitHub Pages](https://mouhameddiom11-ux.github.io/DIOM-MOUHAMED-AFRITALENT/)
 
 ---
 
@@ -92,27 +92,33 @@ NOM-Prenom-AfriTalent/
 - **Accessibilité** : attributs `alt` sur toutes les images, contrastes suffisants, navigation clavier
 
 ---
+## Aperçu
+
+![Capture de la page d'accueil](../images/Captureindex.png)
+
+![capture de la page freelances](../images/freelancecapture.png)
+
+ ![capture de la page tarif](../images/capture%20tarif.png)
+
+ ![capture de la page a propos](../images/aboutCaptured'écran%20.png)
+
+ ![capture de la page contact](../images/contactCaptured'écran%20.png)
 
 ## ⚙️ Installation locale
 
-```bash
-# Cloner le dépôt
 git 
 
 # Ouvrir dans le navigateur
 cd NOM-Prenom-AfriTalent
 open index.html
-# ou avec Live Server dans VS Code
-```
 
----
 
 ## 📦 Déploiement GitHub Pages
 
 1. Pousser le projet sur un dépôt GitHub public
 2. Aller dans **Settings → Pages**
 3. Source : `Deploy from a branch` → branche `main` → dossier `/ (root)`
-4. Le site sera accessible à 
+4. Le site sera accessible à https://mouhameddiom11-ux.github.io/DIOM-MOUHAMED-AFRITALENT/
 
 ---
 
